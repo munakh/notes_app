@@ -1,9 +1,16 @@
 (function(exports) {
-  function note(string) {
-    return string;
-  };
+  function Note(text) {
+    this.text = text
+  }
 
-  exports.note = note;
+  Note.prototype.returnNote = function(){
+    return this.text;
+  }
+
+  exports.Note = Note;
 })(this);
 
-console.log(note("hello"));
+// var note = new Note("hsf");
+// console.log(note.text);
+
+// console.log(note("hi"));
