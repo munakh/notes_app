@@ -1,6 +1,6 @@
 function testingReturnNoteEqualsThisText() {
-  var note = new Note();
-  assert.isTrue(note.returnNote == this.text);
+  var note = new Note("hello");
+  assert.isTrue(note.returnNote() === "hello");
 };
 
 testingReturnNoteEqualsThisText();
