@@ -15,12 +15,13 @@
   exports.NoteList = NoteList;
 })(this);
 
-var list = new NoteList;
-var note = new Note("hello");
-var note1 = new Note("hi");
-list.createAndStoreList(note);
-list.createAndStoreList(note1);
-console.log(list.returnList());
+
+// var list = new NoteList;
+// var note = new Note("hello");
+// var note1 = new Note("hi");
+// list.createAndStoreList(note);
+// list.createAndStoreList(note1);
+// console.log(list.returnList());
 //
 // var list = new NoteList;
 // var note = new Note(note);

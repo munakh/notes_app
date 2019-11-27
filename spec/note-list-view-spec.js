@@ -1,10 +1,19 @@
-function testingViewList() {
-  var list = new NoteList;
-  var note = new Note("hello");
-  list.createAndStoreList(note);
-  var notelist = new ListView(note);
+function testingReturnView() {
+  var array = new ListView(this.view);
+  assert.isTrue(array.returnView() === array.view);
+};
 
-  assert.isTrue(notelist.viewList() === "<li><div>hello</div></li>");
+testingReturnView();
+
+function testingViewList() {
+  var note = new Note(this.text);
+  var list = new NoteList;
+  list.createAndStoreList(note);
+  var listview = new ListView(list);
+  listview.viewList();
+
+
+  assert.isTrue(listview.viewList() === "<li><div>" + list.array + "</div></li>");
 
 };
 
